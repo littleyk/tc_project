@@ -3,11 +3,13 @@ const noButton = document.getElementById("no-button");
 
 // Check if the button was successfully selected
 if (noButton) {
-  // Add a mouseover event listener to move the "No" button randomly
-  noButton.addEventListener("mouseover", () => {
-    console.log('Mouseover event triggered on "No" button');
-    const x = Math.floor(Math.random() * window.innerWidth);
-    const y = Math.floor(Math.random() * window.innerHeight);
+  // Add a click event listener to the "No" button
+  noButton.addEventListener("click", () => {
+    alert('Oh no! You clicked "No". Are you sure?');
+  });
+} else {
+  console.error('No button not found');
+}
 
 // Get the "Yes" button element
 const yesButton = document.getElementById("yes-button");
